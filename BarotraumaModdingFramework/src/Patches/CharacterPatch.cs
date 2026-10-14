@@ -1,25 +1,20 @@
 using HarmonyLib;
 using Barotrauma;
-using System.Drawing;
+using Microsoft.Xna.Framework;
 
 namespace BarotraumaModdingFramework.Patches;
 
-[HarmonyPatch(typeof(Character))]
-[HarmonyPatch(nameof(Character.SpeechBubble))]
+[HarmonyPatch(typeof(Character.SpeechBubble))]
+[HarmonyPatch(MethodType.Constructor)]
+[HarmonyPatch([typeof(Character), typeof(float), typeof(Color), typeof(string)])]
 public class SpeechBubblePatch
 {
-    public static void Prefix(object __instance, ref Character character, ref float lifeTime, ref Color color, ref string text)
+    public static void Prefix(Character character, float lifeTime, Color color, string text)
     {
-        
     }
 
     public static void Postfix(Character character)
     {
         
     }    
-}
-
-
-public class CharacterPatch
-{
 }

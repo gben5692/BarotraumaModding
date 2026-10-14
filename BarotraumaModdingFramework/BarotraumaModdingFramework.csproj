@@ -1,16 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
-
     <Reference Include="Barotrauma" Publicize="true"> 
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Barotrauma\Barotrauma.dll</HintPath>
+      <HintPath>..\..\Barotrauma\Barotrauma\bin\ReleaseWindows\net8.0\Barotrauma.dll</HintPath>
+    </Reference>
+    <Reference Include="XNATypes" Publicize="true"> 
+      <HintPath>..\..\Barotrauma\Barotrauma\bin\ReleaseWindows\net8.0\XNATypes.dll</HintPath>
     </Reference>
   </ItemGroup>
 
