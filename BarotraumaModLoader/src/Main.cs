@@ -1,7 +1,4 @@
-﻿using System.Data;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Runtime.Loader;
+﻿using System.Runtime.InteropServices;
 
 namespace BarotraumaModLoader;
 
