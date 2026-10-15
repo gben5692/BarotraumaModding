@@ -1,5 +1,4 @@
-using BarotraumaModdingFramework.Patches;
-using BarotraumaModdingFramework.Handler;
+using BarotraumaModdingFramework.Handler.Player;
 using Barotrauma;
 using Microsoft.Xna.Framework;
 
@@ -11,11 +10,11 @@ namespace BarotraumaModdingFramework.Events;
 public class Player
 {
     //public static event BarotraumaEvent<PlayerSpawnedEventArgs>? Spawned;
-    public static event BarotraumaEvent<SendingMessageEventArgs>? SendingMessage;
-    internal static void InvokeSendingMessage(Character character, float lifeTime, Color color, string text) => SendingMessage!.Invoke(new(character, lifeTime, color, text));
+    public static event BarotraumaEvent<SendingSpeechBubbleEventArgs>? SendingSpeechBubble;
+    internal static void InvokeSendingMessage(Character character, float lifeTime, Color color, string text) => SendingSpeechBubble!.Invoke(new(character, lifeTime, color, text));
     
-    public static event BarotraumaEvent<SentMessageEventArgs>? SentMessage;
-    internal static void InvokeSentMessage(Character character, float lifeTime, Color color, string text) => SentMessage!.Invoke(new(character, lifeTime, color, text));
+    public static event BarotraumaEvent<SentSpeechBubbleEventArgs>? SentSpeechBubble;
+    internal static void InvokeSentMessage(Character character, float lifeTime, Color color, string text) => SentSpeechBubble!.Invoke(new(character, lifeTime, color, text));
     
 }
 

@@ -3,9 +3,9 @@
 using Barotrauma;
 using Microsoft.Xna.Framework;
 
-namespace BarotraumaModdingFramework.Handler;
+namespace BarotraumaModdingFramework.Handler.Player;
 
-public class SendingMessageEventArgs(Character character, float lifeTime, Color color, string text)
+public class SendingSpeechBubbleEventArgs(Character character, float lifeTime, Color color, string text)
 {
     public Character Character {get;} = character;
     public float LifeTime {get; set;} = lifeTime;
