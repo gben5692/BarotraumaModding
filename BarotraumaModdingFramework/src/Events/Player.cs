@@ -1,8 +1,9 @@
-
-
 using BarotraumaModdingFramework.Patches;
+using BarotraumaModdingFramework.Handler;
+using Barotrauma;
+using Microsoft.Xna.Framework;
 
-namespace BarotraumaModdingFramework;
+namespace BarotraumaModdingFramework.Events;
 
 /// <summary>
 /// This contains list of all events tied to player
@@ -10,6 +11,12 @@ namespace BarotraumaModdingFramework;
 public class Player
 {
     //public static event BarotraumaEvent<PlayerSpawnedEventArgs>? Spawned;
+    public static event BarotraumaEvent<SendingMessageEventArgs>? SendingMessage;
+    internal static void InvokeSendingMessage(Character character, float lifeTime, Color color, string text) => SendingMessage!.Invoke(new(character, lifeTime, color, text));
+    
+    public static event BarotraumaEvent<SentMessageEventArgs>? SentMessage;
+    internal static void InvokeSentMessage(Character character, float lifeTime, Color color, string text) => SentMessage!.Invoke(new(character, lifeTime, color, text));
+    
 }
 
 /// <summary>

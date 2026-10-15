@@ -15,6 +15,12 @@
     <Reference Include="XNATypes" Publicize="true"> 
       <HintPath>..\..\Barotrauma\Barotrauma\bin\ReleaseWindows\net8.0\XNATypes.dll</HintPath>
     </Reference>
+    <Reference Include="Farseer.NetStandard" Publicize="true"> 
+      <HintPath>..\..\Barotrauma\Barotrauma\bin\ReleaseWindows\net8.0\Farseer.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="BarotraumaCore" Publicize="true"> 
+      <HintPath>..\..\Barotrauma\Barotrauma\bin\ReleaseWindows\net8.0\BarotraumaCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
