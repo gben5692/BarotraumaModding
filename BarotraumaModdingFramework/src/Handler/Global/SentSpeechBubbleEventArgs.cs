@@ -1,7 +1,7 @@
 using Barotrauma;
 using Microsoft.Xna.Framework;
 
-namespace BarotraumaModdingFramework.Handler.Player;
+namespace BarotraumaModdingFramework.Handler.Global;
 
 public class SentSpeechBubbleEventArgs(Character character, float lifeTime, Color color, string text)
 {

@@ -1,10 +1,9 @@
 ﻿using System.Runtime.InteropServices;
 using HarmonyLib;
 
-
 namespace BarotraumaModdingFramework;
 
-public class Main
+internal class Main
 {
     [DllImport("kernel32.dll", SetLastError = true)]
     [return: MarshalAs(UnmanagedType.Bool)]
@@ -18,6 +17,9 @@ public class Main
         Console.SetOut(standardOutput);
 
         PatchAll();
+        
+        ModLoader modLoader = new();
+        modLoader.Initialize();
     }
 
     public static void PatchAll()

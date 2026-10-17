@@ -1,4 +1,4 @@
-using BarotraumaModdingFramework.Handler.Player;
+using BarotraumaModdingFramework.Handler.Global;
 using Barotrauma;
 using Microsoft.Xna.Framework;
 
@@ -11,10 +11,10 @@ public class Player
 {
     //public static event BarotraumaEvent<PlayerSpawnedEventArgs>? Spawned;
     public static event BarotraumaEvent<SendingSpeechBubbleEventArgs>? SendingSpeechBubble;
-    internal static void InvokeSendingMessage(Character character, float lifeTime, Color color, string text) => SendingSpeechBubble!.Invoke(new(character, lifeTime, color, text));
+    internal static void InvokeSendingSpeechBubble(Character character, float lifeTime, Color color, string text) => SendingSpeechBubble!.Invoke(new(character, lifeTime, color, text));
     
     public static event BarotraumaEvent<SentSpeechBubbleEventArgs>? SentSpeechBubble;
-    internal static void InvokeSentMessage(Character character, float lifeTime, Color color, string text) => SentSpeechBubble!.Invoke(new(character, lifeTime, color, text));
+    internal static void InvokeSentSpeechBubble(Character character, float lifeTime, Color color, string text) => SentSpeechBubble!.Invoke(new(character, lifeTime, color, text));
     
 }
 

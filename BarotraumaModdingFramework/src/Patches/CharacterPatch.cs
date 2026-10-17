@@ -16,10 +16,12 @@ public class SpeechBubblePatch
         //     Player.InvokeSendingMessage(character, lifeTime, color, text);
         // }
 
-        if (character == Character.controlled)
-        {
-            Player.InvokeSendingMessage(character, lifeTime, color, text);
-        }
+        // if (character == Character.controlled)
+        // {
+        //     Player.InvokeSendingSpeechBubble(character, lifeTime, color, text);
+        // }
+
+        // World.InvokeSendingSpeechBubble(character, lifeTime, color, text);
     }
 
     public static void Postfix(Character character, float lifeTime, Color color, string text)
@@ -29,9 +31,11 @@ public class SpeechBubblePatch
         //     Player.InvokeSentMessage(character, lifeTime, color, text);
         // }
 
-        if (character == Character.controlled)
-        {
-            Player.InvokeSentMessage(character, lifeTime, color, text);
-        }
+        // if (character == Character.controlled)
+        // {
+        //     Player.InvokeSentSpeechBubble(character, lifeTime, color, text);
+        // }
+
+        World.InvokeSentSpeechBubble(character, lifeTime, color, text);
     }    
 }
