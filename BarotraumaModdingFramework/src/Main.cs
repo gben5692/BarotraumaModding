@@ -63,6 +63,10 @@ internal class Main
                 case "-list":
                     modLoader?.ListPlugins();
                     break;
+                
+                default:
+                    Console.WriteLine("I have no idea what you were trying to achieve.");
+                  break;
             }
         }
     }
