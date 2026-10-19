@@ -3,8 +3,9 @@
 This is a modding tool for barotrauma. uh yeah
 
 Pictures:
-<img width="1863" height="1196" alt="Skärmbild 2026-10-19 194119" src="https://github.com/user-attachments/assets/cb28b049-0ac1-4aea-beb6-9a3399161d60" />
-<img width="1867" height="1199" alt="Skärmbild 2026-10-19 193156" src="https://github.com/user-attachments/assets/599bd35b-27dd-48f4-b996-9f5f9f7962c8" />
+<img width="1863" height="1196" alt="Chaos2" src="https://github.com/user-attachments/assets/db883d5e-2b2b-4b3f-9290-17e87f195cb9" />
+<img width="1867" height="1199" alt="Chaos1" src="https://github.com/user-attachments/assets/2e91fae5-5f5c-462a-afd6-5193efe53436" />
+
 
 
 
