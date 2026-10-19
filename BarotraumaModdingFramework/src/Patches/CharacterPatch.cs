@@ -21,7 +21,7 @@ public class SpeechBubblePatch
         //     Player.InvokeSendingSpeechBubble(character, lifeTime, color, text);
         // }
 
-        // World.InvokeSendingSpeechBubble(character, lifeTime, color, text);
+        World.InvokeSendingSpeechBubble(character, lifeTime, color, text);
     }
 
     public static void Postfix(Character character, float lifeTime, Color color, string text)

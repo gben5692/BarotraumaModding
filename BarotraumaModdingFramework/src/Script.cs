@@ -8,5 +8,6 @@ public class Script
     public virtual Version? Version {get; set;}
 
     public virtual void OnEnabled() {}
+    public virtual void OnUpdate() {}  
     public virtual void OnDisabled() {}
 }

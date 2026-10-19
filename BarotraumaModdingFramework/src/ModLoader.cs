@@ -5,6 +5,10 @@ namespace BarotraumaModdingFramework;
 
 internal class ModLoader // this class will handle loading plugins from a folder
 {
+
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+#pragma warning disable CS8620 // Argument cannot be used for parameter due to differences in the nullability of reference types.
+
     private readonly string PluginsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Plugins");
     private readonly List<(AssemblyLoadContext context, Script script)> LoadedPlugins = [];
 
@@ -43,10 +47,14 @@ internal class ModLoader // this class will handle loading plugins from a folder
                         if (typeof(Script).IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
                         {
                             var plugin = (Script)Activator.CreateInstance(type);
+
                             LoadedPlugins.Add((dll, plugin));
+
                             Console.WriteLine($"Loaded: {plugin?.Name} by {plugin?.Author} v{plugin?.Version}");
                             plugin!.OnEnabled();
                         }
+                        
+                        dll.Unload();
                     }
                 }
             }
@@ -91,5 +99,20 @@ internal class ModLoader // this class will handle loading plugins from a folder
         UnloadPlugins();
         LoadPlugins();
         Console.WriteLine("Plugins Reloaded!");
+    }
+
+    public void ListPlugins()
+    {
+        if (LoadedPlugins.Count > 0)
+        {
+            foreach (var (context, scripts) in LoadedPlugins)
+            {
+                Console.WriteLine($"Loaded: {scripts?.Name} by {scripts?.Author} v{scripts?.Version}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("There are no loaded plugins");
+        }
     }
 }

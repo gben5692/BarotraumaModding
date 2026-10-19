@@ -1,4 +1,4 @@
-using BarotraumaModdingFramework.Handler.Global;
+using BarotraumaModdingFramework.Handler.World;
 using Barotrauma;
 using Microsoft.Xna.Framework;
 

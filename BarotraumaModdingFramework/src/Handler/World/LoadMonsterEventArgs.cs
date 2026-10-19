@@ -3,7 +3,7 @@
 using System.Xml.Linq;
 using Barotrauma;
 
-namespace BarotraumaModdingFramework.Handler;
+namespace BarotraumaModdingFramework.Handler.World;
 
 public class LoadMonsterEventArgs(CharacterPrefab monsterPrefab, XElement element, Submarine submarine)
 {
